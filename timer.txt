@@ -1,0 +1,20 @@
+1 /48mz(1 tick) = 0.02us; so 1 second = 1/0.02us, i.e (10^6)/0.02 = 50000000 ticks;
+
+24 hrs = 24*3600 seconds; 24hrs = 24*3600*500000000 = 4320000000000 ticks; 
+
+this 4320000000000 can be represented in 42 bit variable. we have 32 bits in timers; remaining 10 bits need another 16bit variable.
+
+So everytime 32 bit timers overflow add 1 to that 16 bit variable.
+
+
+
+1929347966
+
+		count	0x7cff837e	unsigned int
+
+		0xffff00e5
+		
+		4320000000000
+		4294901989   * 1005
+		4294901760
+		  50000000
